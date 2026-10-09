@@ -1,0 +1,30 @@
+# Counterexamples to Graffiti.pc Conjecture 66
+
+Deep Bhattacharjee
+
+*Written on the Wall II* (E. DeLaViña's list of the conjectures of Graffiti.pc) marks
+Conjecture 66 as open:
+
+> If G is a simple connected graph, then f(G) ≥ 2·⌈even_mode_min(Ḡ) / deg_avg(G)⌉,
+
+where f(G) is the order of a largest induced forest, Ḡ the complement and deg_avg(G) = 2m/n.
+
+It is false. Let H_c be c copies of K₄ joined in a path by c − 1 single edges. Then
+f(H_c) = 2c, the only even degree of the complement is 4c − 4, and deg_avg(H_c) = (7c − 1)/(2c),
+so the right side is 2·⌈8c(c − 1)/(7c − 1)⌉, which exceeds 2c for every c ≥ 8. The same family
+also refutes the statement with ⌊·⌋ in place of ⌈·⌉ (the definition the list links to) for every
+c ≥ 14, and the gap grows without bound. As printed, the smallest counterexamples have 10
+vertices: 7 of the 11,716,571 connected graphs on 10 vertices, and none smaller.
+
+## Checks
+
+```
+verification/c/wowii66.c         exhaustive search (graph6 from nauty's geng) and the family H_c
+verification/cpp/wowii66.cpp     independent re-implementation; its output is identical to the C one
+verification/python/verify66.py  exact arithmetic, all labelled graphs up to 6 vertices, H_c
+verification/julia/verify66.jl   exact arithmetic, f by all subsets for H_c with c <= 5
+verification/lean/C66.lean       Lean 4 kernel check of the 10-vertex counterexample
+verification/data/               output of the search over all connected graphs with 2 to 10 vertices
+```
+
+Work in progress: the paper (preprintWOWIIConjecture66/) is not written yet.
