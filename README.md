@@ -21,7 +21,9 @@ vertices, and none smaller.
 
 `preprintWOWIIConjecture66/` holds the paper, *A counterexample to a conjecture of Graffiti.pc on
 the forest number* (LaTeX source and TikZ figures); `dist/` holds the PDF, a source zip with PNG
-figures and an arXiv tarball, rebuilt by `scripts/build_paper.sh`.
+figures and an arXiv tarball, rebuilt by `scripts/build_paper.sh`. The same paper in the template of
+Discrete Mathematics Letters is `preprintWOWIIConjecture66/dml/wowii66-dml.tex`; `scripts/build_dml.sh`
+builds it into `build/submission-dml/`.
 
 ## Checks
 
