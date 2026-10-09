@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "A counterexample to a conjecture of Graffiti.pc on the forest number"
+type: software
+authors:
+  - family-names: Bhattacharjee
+    given-names: Deep
+    orcid: "https://orcid.org/0000-0003-0466-750X"
+    affiliation: "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India"
+    email: d.bhattacharjee@erl-forschung.de
+version: 1.0.0
+date-released: 2026-10-09
+license: MIT
+repository-code: "https://github.com/creelie/eConjectureWOWII66"
+keywords:
+  - induced forest
+  - forest number
+  - degree sequence
+  - Graffiti.pc
+  - Written on the Wall II
+  - counterexample
+abstract: >-
+  Conjecture 66 of Graffiti.pc, listed as open in Written on the Wall II,
+  states that the order of a largest induced forest of a connected graph is
+  at least twice the ceiling of the even mode of the degrees of its
+  complement divided by its average degree. We show that it is false under
+  every reading of its definitions. Chains of c copies of K4 refute it for
+  every c >= 8, and the version with the floor for every c >= 14, by a margin
+  that grows without bound. Among connected graphs with at most 10 vertices,
+  exactly seven violate the printed statement, all with 10 vertices.
+references:
+  - type: article
+    title: "Resolving Erdős–Ulam monochromatic union-closed family conjectures"
+    authors:
+      - family-names: Bhattacharjee
+        given-names: Deep
+      - family-names: Mandal
+        given-names: Priyabrata
+      - family-names: Bhattacharya
+        given-names: Ushashi
+    year: 2026
+    url: "https://arxiv.org/abs/2610.02833"

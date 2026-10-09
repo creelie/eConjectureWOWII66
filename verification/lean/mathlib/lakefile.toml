@@ -1,0 +1,10 @@
+name = "WOWII66"
+defaultTargets = ["C66Family"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.34.1"
+
+[[lean_lib]]
+name = "C66Family"

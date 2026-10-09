@@ -1,4 +1,4 @@
-# Counterexamples to Graffiti.pc Conjecture 66
+# A counterexample to Graffiti.pc Conjecture 66
 
 Deep Bhattacharjee
 
@@ -13,18 +13,33 @@ It is false. Let H_c be c copies of K₄ joined in a path by c − 1 single edge
 f(H_c) = 2c, the only even degree of the complement is 4c − 4, and deg_avg(H_c) = (7c − 1)/(2c),
 so the right side is 2·⌈8c(c − 1)/(7c − 1)⌉, which exceeds 2c for every c ≥ 8. The same family
 also refutes the statement with ⌊·⌋ in place of ⌈·⌉ (the definition the list links to) for every
-c ≥ 14, and the gap grows without bound. As printed, the smallest counterexamples have 10
-vertices: 7 of the 11,716,571 connected graphs on 10 vertices, and none smaller.
+c ≥ 14, and the gap grows without bound. Both readings of even_mode_min are covered. As printed,
+the smallest counterexamples have 10 vertices: 7 of the 11,716,571 connected graphs on 10
+vertices, and none smaller.
+
+## Paper
+
+`preprintWOWIIConjecture66/` holds the paper, *A counterexample to a conjecture of Graffiti.pc on
+the forest number* (LaTeX source and TikZ figures); `dist/` holds the PDF, a source zip with PNG
+figures and an arXiv tarball, rebuilt by `scripts/build_paper.sh`.
 
 ## Checks
 
 ```
-verification/c/wowii66.c         exhaustive search (graph6 from nauty's geng) and the family H_c
-verification/cpp/wowii66.cpp     independent re-implementation; its output is identical to the C one
-verification/python/verify66.py  exact arithmetic, all labelled graphs up to 6 vertices, H_c
-verification/julia/verify66.jl   exact arithmetic, f by all subsets for H_c with c <= 5
-verification/lean/C66.lean       Lean 4 kernel check of the 10-vertex counterexample
-verification/data/               output of the search over all connected graphs with 2 to 10 vertices
+verification/c/wowii66.c                 exhaustive search (graph6 from nauty's geng) and H_c, c <= 300
+verification/cpp/wowii66.cpp             independent re-implementation; its output is identical to the C one
+verification/shell/check66.sh            bash integer arithmetic only: G_10 (f by all subsets), H_c, Lemma 2.3
+verification/python/verify66.py          exact arithmetic, all labelled graphs up to 6 vertices, H_c
+verification/julia/verify66.jl           exact arithmetic, f by all subsets for H_c with c <= 5
+verification/lean/C66.lean               Lean 4 kernel check of the 10-vertex counterexample (axiom: propext)
+verification/lean/mathlib/C66Family.lean Lean 4 + Mathlib proof that H_c violates the conjecture for every
+                                         c >= 8 (c >= 14 with the floor), under both readings
+verification/data/                       output of the search over all connected graphs with 2 to 10 vertices
 ```
 
-Work in progress: the paper (preprintWOWIIConjecture66/) is not written yet.
+`scripts/run_all.sh` runs them all (`FULL=1` repeats the 10-vertex search, `MATHLIB=1` builds the
+Mathlib proof); the `verify` workflow runs them on every pull request.
+
+## Licence
+
+MIT, see `LICENSE`.
