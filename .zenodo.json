@@ -1,0 +1,41 @@
+{
+  "title": "A counterexample to a conjecture of Graffiti.pc on the forest number",
+  "version": "1.0.0",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Bhattacharjee, Deep",
+      "orcid": "0000-0003-0466-750X",
+      "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India"
+    }
+  ],
+  "description": "<p>Conjecture 66 of Graffiti.pc, listed as open in Written on the Wall II, states that the order of a largest induced forest of a connected graph is at least twice the ceiling of the even mode of the degrees of its complement divided by its average degree. We show that it is false under every reading of its definitions. Chains of c copies of K<sub>4</sub> refute it for every c &ge; 8, and the version with the floor for every c &ge; 14, by a margin that grows without bound. Among the connected graphs with at most 10 vertices, exactly seven violate the printed statement, all with 10 vertices, and none violates the version with the floor.</p><p>The archive contains the paper (PDF, LaTeX sources with PNG figures, arXiv tarball), the exhaustive search over all 11,989,763 connected graphs with 2 to 10 vertices, and independent checks of every finite claim in C, C++, Bash, Python, Julia and Lean 4. A Lean 4 proof with Mathlib shows, for every c, that the chain H<sub>c</sub> violates the conjecture under both readings of the even mode when c &ge; 8, and with the floor when c &ge; 14, using only the standard axioms; a second Lean file checks the 10-vertex counterexample in the kernel using only propext.</p>",
+  "keywords": [
+    "induced forest",
+    "forest number",
+    "degree sequence",
+    "Graffiti.pc",
+    "Written on the Wall II",
+    "counterexample",
+    "05C69",
+    "05C05",
+    "05C07"
+  ],
+  "license": "MIT",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/creelie/eConjectureWOWII66",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "arXiv:2610.02833",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "arxiv"
+    }
+  ],
+  "notes": "Corresponding author: d.bhattacharjee@erl-forschung.de; also itsdeep@live.com."
+}

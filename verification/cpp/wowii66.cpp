@@ -7,7 +7,7 @@
 // with a union-find acyclicity test.  The output of "search" is identical, line for line, to
 // that of the C program, so the two can be compared with diff.
 //
-//   wowii66cpp search < graphs.g6
+//   wowii66cpp search < graphs.g6   (at most 24 vertices: f is computed over all subsets)
 //   wowii66cpp family CMAX          (CMAX <= 300; exact f by all subsets for c <= 5)
 #include <algorithm>
 #include <cstdint>
@@ -127,6 +127,7 @@ static int search()
         Graph g = parse_graph6(line);
         int n = static_cast<int>(g.size());
         if (n < 2) continue;
+        if (n > 24) { std::cerr << "search handles at most 24 vertices: " << line << "\n"; status = 1; continue; }
         if (!is_connected(g)) { std::cerr << "disconnected input: " << line << "\n"; status = 1; continue; }
         ++graphs[n];
         tested[n].resize(4); viol[n].resize(4);
