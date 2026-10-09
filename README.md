@@ -2,6 +2,8 @@
 
 Deep Bhattacharjee
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23254096.svg)](https://doi.org/10.5281/zenodo.23254096)
+
 *Written on the Wall II* (E. DeLaViña's list of the conjectures of Graffiti.pc) marks
 Conjecture 66 as open:
 
@@ -41,6 +43,12 @@ verification/data/                       output of the search over all connected
 
 `scripts/run_all.sh` runs them all (`FULL=1` repeats the 10-vertex search, `MATHLIB=1` builds the
 Mathlib proof); the `verify` workflow runs them on every pull request.
+
+## Citation
+
+Archived on Zenodo: concept DOI [10.5281/zenodo.23254096](https://doi.org/10.5281/zenodo.23254096)
+(all versions); v1.0.0 is [10.5281/zenodo.23254097](https://doi.org/10.5281/zenodo.23254097).
+See `CITATION.cff`.
 
 ## Licence
 
